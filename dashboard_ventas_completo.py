@@ -240,7 +240,7 @@ if uploaded_file is not None:
             famd_df = pd.DataFrame(famd_components.values, columns=['F1', 'F2'], index=df_famd.index).dropna()
 
             # Clustering
-            kmeans = KMeans(n_clusters=3, random_state=42)
+            kmeans = KMeans(n_clusters=4, random_state=42)
             famd_df['cluster'] = kmeans.fit_predict(famd_df)
 
             # Visualización
